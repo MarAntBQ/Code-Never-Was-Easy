@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK|Rubik+Mono+One&display=swap');
+
+//Aqui estan las variables para el proyecto
+@import 'variables/variables';
+
+//Mixin 
+@mixin links {
+    color: $colorh;
+    text-decoration: none;
+    transition: 1s;
+
+    &:hover {
+        color: $colorhover;
+    }
+}
+
+
+@for $variable-inicial  from 10 through 30 {
+    .fs#{$variable-inicial}px {
+        font-size: 0px + $variable-inicial;
+    }
+    
+    .p#{$variable-inicial}px {
+        padding: 0px + $variable-inicial;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 300px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $colorh;
+    font-family: $fuente1;
+}
+
+body {
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+@import 'partials/header';
+
+footer {
+    background: $colorfooter;
+    padding: 5px 10px;
+
+    a {
+        @include links;
+        animation: 5s linkdelfooter infinite ease;
+    }
+}
+
+@keyframes linkdelfooter {
+    0% {
+        color: red;
+    }
+    20% {
+        color: green;
+    }
+    40% {
+        color: red;
+    }
+    60% {
+        color: green;
+    }
+    80% {
+        color: red;
+    }
+    100% {
+        color: green;
+    }
+}
+
+.tac {
+    text-align: center;
+}
+
+.boton {
+    display: block;
+    width: 100px;
+    text-align: center;
+    background: $colorheader;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    margin: 5px auto;
+    border-radius: 5px;
+    transition: 1s;
+    &:hover {
+        background: #E3B505;
+        transform: scale(1.1);
+    }
+}
+
+.slogan {
+    text-align: center;
+    font-size: 20px;
+}
+
+.position-test {
+    p {
+        img {
+            width: 50px;
+            border: 1px solid;
+           float: left;
+            margin-right: 5px;
+            position: relative;
+            //top: 5px;
+        }
+    }
+}
+
+#espaciado-lineal {
+    line-height: 2em;
+    margin: 15px 20px;
+}
+
+@import 'partials/banner';
+@import 'partials/fixed';
+@import 'partials/absoluto';
+@import 'partials/relative';
+@import 'partials/flexbox';
+@import 'partials/flexalign';

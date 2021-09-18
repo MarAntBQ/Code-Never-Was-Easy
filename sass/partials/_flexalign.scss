@@ -1,0 +1,15 @@
+.prueba-flex-a {
+    background: blue;
+    height: 400px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    //flex-direction: column;
+    .box {
+        width: 25px;
+        height: 25px;
+        background: yellow;
+        margin: 5px;
+    }
+}

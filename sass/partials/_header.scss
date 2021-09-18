@@ -1,0 +1,43 @@
+header {
+     padding-top: $paddingtop;
+    background: $colorheader;
+    //padding-bottom: $paddingbottom;
+
+    h1 {
+        text-align: center;
+
+        .linktitulo {
+            @include links;
+        }
+    }
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            background: yellow;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            li {
+                @media (max-width: 750px) {
+                    width: 100%;
+                }
+                a {
+                    display: block;
+                    //margin: 2px;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    background: $colorfooter;
+                    color: white;
+                    transition: 1s;
+                    margin-left: 3px;
+                    margin-right: 3px;
+                    &:hover {
+                        background: #9f7f07;
+                    }
+                }
+            }
+        }
+    }
+}
